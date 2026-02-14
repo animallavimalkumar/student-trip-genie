@@ -1,73 +1,194 @@
-# Welcome to your Lovable project
+# ✈️ AI Travel Planner for Students
 
-## Project info
+An AI-powered web application that generates optimized travel itineraries for students based on budget, duration, and interests. The system automates trip planning by recommending destinations, schedules, and cost breakdowns — eliminating manual research and inefficient planning.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+# 📌 Project Overview
 
-There are several ways of editing your application.
+Trip planning is time-consuming and often inefficient for students due to budget constraints, lack of travel knowledge, and poor scheduling. This application solves that problem by generating intelligent itineraries using AI logic and optimization rules.
 
-**Use Lovable**
+The platform allows users to input travel parameters and receive a structured trip plan including destinations, activities, accommodation suggestions, and expense analysis.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+# 🎯 Objectives
 
-**Use your preferred IDE**
+* Automate student trip planning
+* Optimize travel within limited budgets
+* Generate personalized itineraries
+* Provide cost visualization dashboards
+* Improve time and route efficiency
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# 🧠 Key Features
 
-Follow these steps:
+* AI itinerary generation
+* Budget allocation planner
+* Interest-based destination suggestions
+* Trip schedule timeline
+* Expense breakdown charts
+* Responsive modern UI
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+---
+
+# 🏗️ System Architecture
+
+**Frontend:** React + TypeScript
+**Styling:** Tailwind CSS + shadcn UI
+**Build Tool:** Vite
+**Deployment:** Lovable Hosting
+
+---
+
+# ⚙️ Working Flow
+
+1. User enters trip details
+2. System validates inputs
+3. AI engine generates itinerary
+4. Budget optimizer distributes expenses
+5. Dashboard displays final travel plan
+
+---
+
+# 🧪 Example Scenarios
+
+### Scenario 1
+
+**Input**
+
+* Budget: ₹10,000
+* Duration: 2 Days
+* Interest: Nature
+
+**Output**
+
+* Destination: Araku Valley
+* Travel: Train
+* Stay: Budget homestay
+* Activities: Sightseeing + Trekking
+
+---
+
+### Scenario 2
+
+**Input**
+
+* Budget: ₹25,000
+* Duration: 4 Days
+* Interest: Food + City Life
+
+**Output**
+
+* Destination: Hyderabad
+* Travel: Metro + Cab
+* Activities: Charminar, Street Food Tour
+* Cost split across stay, travel, food
+
+---
+
+# 💻 Installation & Setup
+
+## Prerequisites
+
+Ensure the following are installed:
+
+* Node.js
+* npm
+* Git
+
+Check versions:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## Run Locally
+
+```bash
+# 1️⃣ Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2️⃣ Navigate into the project folder
+cd <PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3️⃣ Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4️⃣ Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+App runs at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Production Build
 
-## What technologies are used for this project?
+```bash
+npm run build
+npm run preview
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# 🚀 Deployment
 
-## How can I deploy this project?
+1. Open project in Lovable
+2. Click **Share → Publish**
+3. Application goes live with hosted URL
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+# 📊 Technology Stack
 
-Yes, you can!
+| Technology   | Purpose                   |
+| ------------ | ------------------------- |
+| React        | UI Development            |
+| TypeScript   | Type Safety               |
+| Vite         | Fast Build Tool           |
+| Tailwind CSS | Styling                   |
+| shadcn UI    | Component Library         |
+| Lovable      | Hosting & AI Dev Platform |
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# 🔐 Limitations
+
+* Static or limited travel datasets
+* No real-time price tracking
+* AI suggestions require manual validation
+
+---
+
+# 🔮 Future Enhancements
+
+* Real-time flight & hotel APIs
+* Google Maps route optimization
+* Group expense splitting
+* AI chatbot travel assistant
+* Mobile app version
+
+---
+
+# 👨‍💻 Author
+
+**Vimal Kumar**
+Python Full Stack Developer
+AI & Web Application Enthusiast
+
+---
+
+# 📜 License
+
+This project is developed for academic and educational purposes. Free to use and modify with attribution.
+
+---
