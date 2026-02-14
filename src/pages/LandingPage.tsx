@@ -36,7 +36,7 @@ const LandingPage = () => {
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
           <div className="flex items-center gap-2">
             <Plane className="h-6 w-6 text-primary" />
-            <span className="font-display font-bold text-xl text-foreground">WanderAI</span>
+            <span className="font-display font-bold text-xl text-foreground">Travel App</span>
           </div>
           <div className="flex items-center gap-2">
             <Button variant="outline" size="sm" onClick={() => navigate("/saved-trips")}>
@@ -81,7 +81,7 @@ const LandingPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-foreground mb-4">
-            Why Students Love <span className="text-gradient-hero">WanderAI</span>
+            Why Students Love <span className="text-gradient-hero">Travel App</span>
           </h2>
           <p className="text-muted-foreground text-center max-w-xl mx-auto mb-12">
             No fake budgets. No generic plans. Real AI that understands student travel.
@@ -126,7 +126,7 @@ const LandingPage = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border bg-background">
         <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
-          © 2026 WanderAI — Built for student explorers 🎒
+          Copyright 2026 Travel App - Built for student explorers
         </div>
       </footer>
     </div>
@@ -134,3 +134,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
