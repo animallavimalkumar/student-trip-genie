@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Loader2, MapPin, Calendar, Users, IndianRupee } from "lucide-react";
 import type { TripFormData } from "@/types/travel";
+import { saveTrip } from "@/lib/tripStorage";
 
 const INTERESTS = ["Nature", "Beaches", "History", "Adventure", "Nightlife", "Culture", "Food", "Trekking", "Wildlife", "Architecture"];
 
@@ -55,6 +56,13 @@ const TripPlannerForm = () => {
       }
 
       const data = await res.json();
+      try {
+        if (data?.itinerary) {
+          saveTrip(form, data.itinerary);
+        }
+      } catch (e) {
+        console.warn("Could not save trip locally", e);
+      }
       navigate("/results", { state: { itinerary: data.itinerary, formData: form } });
     } catch (err) {
       console.error(err);
@@ -72,6 +80,9 @@ const TripPlannerForm = () => {
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <h1 className="font-display font-bold text-lg text-foreground">Plan Your Trip</h1>
+          <Button variant="outline" className="ml-auto" onClick={() => navigate("/saved-trips")}>
+            Previous Trips
+          </Button>
         </div>
       </nav>
 

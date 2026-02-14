@@ -38,9 +38,14 @@ const LandingPage = () => {
             <Plane className="h-6 w-6 text-primary" />
             <span className="font-display font-bold text-xl text-foreground">WanderAI</span>
           </div>
-          <Button variant="hero" size="sm" onClick={() => navigate("/plan")}>
-            Plan a Trip
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" onClick={() => navigate("/saved-trips")}>
+              Saved Trips
+            </Button>
+            <Button variant="hero" size="sm" onClick={() => navigate("/plan")}>
+              Plan a Trip
+            </Button>
+          </div>
         </div>
       </nav>
 

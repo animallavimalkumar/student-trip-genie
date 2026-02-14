@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import TripPlannerForm from "./pages/TripPlannerForm";
 import ItineraryResults from "./pages/ItineraryResults";
+import SavedTripsPage from "./pages/SavedTripsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/plan" element={<TripPlannerForm />} />
+          <Route path="/saved-trips" element={<SavedTripsPage />} />
           <Route path="/results" element={<ItineraryResults />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
