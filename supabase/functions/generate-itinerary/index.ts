@@ -1,3 +1,4 @@
+// @ts-ignore - Deno is available in Supabase Edge Functions
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 const corsHeaders = {
@@ -6,7 +7,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-serve(async (req) => {
+serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -14,8 +15,9 @@ serve(async (req) => {
   try {
     const { source, destination, dates, duration, budget, interests, groupSize, transport, accommodation } = await req.json();
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+    // @ts-ignore - Deno is available in Supabase Edge Functions
+    const GROQ_API_KEY = Deno.env.get("GROQ_API_KEY");
+    if (!GROQ_API_KEY) throw new Error("GROQ_API_KEY is not configured");
 
     const userPrompt = `Plan a student-friendly, budget trip with these details:
 - Source: ${source || "Not specified"}
@@ -62,14 +64,14 @@ Return a JSON object with this exact structure (no markdown, just JSON):
   }
 }`;
 
-    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        Authorization: `Bearer ${GROQ_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-3-flash-preview",
+        model: "llama-3.3-70b-versatile",
         messages: [
           {
             role: "system",
@@ -77,6 +79,7 @@ Return a JSON object with this exact structure (no markdown, just JSON):
           },
           { role: "user", content: userPrompt },
         ],
+        temperature: 0.7,
       }),
     });
 
