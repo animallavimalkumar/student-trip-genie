@@ -2,8 +2,6 @@
 
 An AI-powered web application that generates optimized travel itineraries for students based on budget, duration, and interests. The system automates trip planning by recommending destinations, schedules, and cost breakdowns — eliminating manual research and inefficient planning.
 
----
-
 # 📌 Project Overview
 
 Trip planning is time-consuming and often inefficient for students due to budget constraints, lack of travel knowledge, and poor scheduling. This application solves that problem by generating intelligent itineraries using AI logic and optimization rules.
